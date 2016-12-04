@@ -1,0 +1,18 @@
+﻿STEPS TO FOLLOW - IMPLEMENTING CODE FIRST APPROACH OF ENTITY FRAMEWORK:
+
+Step 1:  Create either a WebApi Empty project or just an empty project
+Step 2:  Install Entity Framework using "Manage Nugest Packages: option
+Step 3:  Update web.config with connection string 
+Step 4:  Create new Context class (created as part of connection string in web.config) under Models folder,
+         by deriving it from DbContext. This will contain the OnModelCreating override alongwith DbSet<> definitions
+Step 5:  Create DbInitializer class under Model folder. This will contain the override for Seed method to insert initial data
+Step 6:  Add POCO objects to Models folder, which represent the business objects in the form of table(s) in database
+Step 7:  Launch "Package Manager Console" and execute below commands in the same order:
+         to Enable Migrations :  enable-migrations (will create "Migrations" folder under project solution with "Configurtion.cs" class)
+	     to Add Migrations :	 add-migration InitialCreate (here, InitialCreate is the name of migration)
+	     to Update Migrations:	 update-database
+Step 8:  Launch SSMS and expand the database tables to see the POCO objects created as table(s)
+Step 9:  Now, All DbSet<> defined under "Step 4" can be accessed from the project using "context"
+Step 10:  From now on, any kind of POCO object changes will be taken care by executing below two commands:
+	     to Add Migrations :	 add-migration 'with specific change name' (ex: FirstChange)
+	     to Update Migrations:	 update-database

@@ -1,0 +1,1 @@
+http://www.entityframeworktutorial.net/code-first/code-first-conventions.aspx

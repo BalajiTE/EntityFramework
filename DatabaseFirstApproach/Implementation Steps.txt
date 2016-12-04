@@ -1,0 +1,17 @@
+﻿STEPS TO FOLLOW - IMPLEMENTING DATABASE FIRST APPROACH OF ENTITY FRAMEWORK:
+
+Step 1:  Create either a WebApi Empty project or just an empty project
+Step 2:  Install Entity Framework using "Manage Nugest Packages: option
+Step 3:  Update web.config with connection string 
+Step 4:  Generate Model(s) by right clicking on "Models" folder by selecting:
+			- Data -> ADO.NET Entity Data Model
+			- EF Designer from Database
+			- Pick newly created context from web.config
+			- Provide new Context class name
+			- Pick SQL objects from Tables, Views and Stored Procedures
+			- Models and edmx will be generted after these steps
+Step 5:  Updating edmx can be done by:
+			- Make required changes in database using SSMS
+			- Pick "Update Model from Database" option by right clicking on edmx
+Step 6:  Use Fluent API (as explained in "onModelCreting" method) to create relationships like 
+		 one-to-zeroorone, one-to-many, many-to-many etc.

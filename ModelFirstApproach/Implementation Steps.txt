@@ -1,0 +1,17 @@
+﻿STEPS TO FOLLOW - IMPLEMENTING MODEL FIRST APPROACH OF ENTITY FRAMEWORK:
+
+Step 1:  Create either a WebApi Empty project or just an empty project
+Step 2:  Install Entity Framework using "Manage Nugest Packages: option
+Step 3:  Create new "ADO.NET Entity Data Model" by right clicking on "Models" folder:
+         - Pick "Empty EF Designer Model" option from "Choose Model Contents"
+		 - Add New Entity by right clicking on .edmx
+		 - Create new scalar and navigation properties for the entity
+Step 4:  Pick "Generate Database from Model" option by right clicking on .edmx
+         - Create new connection by providing nme of the database
+		 - At this time the .edmx will generate the .sql file
+		 - Select the appropriate "EF DbContext Generator" to generate model classes
+Step 5:  Execute above generated .sql to actully create the database and tables
+Step 6:  To update database following this approach, we need to either:
+         - Follow Database First approach way, by making changes to existing database nd pulling the changes by
+		   using "Update Model from Database" option from context menu of .edmx   OR
+		 - Re-generate the database by following step 4 (possibly step 3 also) 
