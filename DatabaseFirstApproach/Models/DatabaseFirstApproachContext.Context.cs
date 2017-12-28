@@ -25,9 +25,9 @@ namespace DatabaseFirstApproach.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<FluentStudent> FluentStudent { get; set; }
         public virtual DbSet<FluentStudentAddress> FluentStudentAddress { get; set; }
         public virtual DbSet<Student> Student { get; set; }
         public virtual DbSet<StudentAddress> StudentAddress { get; set; }
+        public virtual DbSet<FluentStudent> FluentStudent { get; set; }
     }
 }

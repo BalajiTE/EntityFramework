@@ -16,7 +16,6 @@ namespace DatabaseFirstApproach.Models
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public string Test { get; set; }
     
         public virtual FluentStudentAddress FluentStudentAddress { get; set; }
     }
